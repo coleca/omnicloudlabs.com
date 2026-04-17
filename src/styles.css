@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
@@ -30,6 +31,8 @@ body {
   font-family: 'Instrument Sans', sans-serif;
   background: var(--bg);
   color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 img {
@@ -44,6 +47,33 @@ a {
 
 button {
   font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(101, 212, 255, 0.24);
+  color: var(--text);
+}
+
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  z-index: 40;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: #ebfbff;
+  color: var(--text-dark);
+  font-weight: 700;
+  transition: top 180ms ease;
+}
+
+.skip-link:focus-visible {
+  top: 1rem;
 }
 
 .site-header {
@@ -122,6 +152,12 @@ button {
   min-height: calc(100svh - 78px);
 }
 
+#capabilities,
+#process,
+#contact {
+  scroll-margin-top: 6rem;
+}
+
 .hero-backdrop,
 .hero-overlay {
   position: absolute;
@@ -154,7 +190,7 @@ button {
 }
 
 .hero-copy {
-  max-width: 38rem;
+  max-width: 34rem;
 }
 
 .eyebrow,
@@ -181,12 +217,13 @@ button {
   margin: 0;
   font-family: 'Sora', sans-serif;
   letter-spacing: -0.05em;
+  text-wrap: balance;
 }
 
 .hero h1 {
-  max-width: 11ch;
-  font-size: clamp(3.3rem, 8.6vw, 6.2rem);
-  line-height: 0.96;
+  max-width: 10ch;
+  font-size: clamp(2.7rem, 5vw, 4.55rem);
+  line-height: 1.02;
 }
 
 .lede,
@@ -201,7 +238,7 @@ button {
 }
 
 .lede {
-  max-width: 34rem;
+  max-width: 31rem;
   color: var(--text-muted);
   margin: 1.35rem 0 0;
 }
@@ -222,6 +259,7 @@ button {
   border-radius: 999px;
   border: 1px solid transparent;
   font-weight: 700;
+  touch-action: manipulation;
   transition:
     transform 180ms ease,
     background-color 180ms ease,
@@ -244,6 +282,12 @@ button {
   color: var(--text);
   background: rgba(255, 255, 255, 0.03);
   border-color: rgba(170, 211, 255, 0.2);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(170, 211, 255, 0.34);
 }
 
 .hero-list,
@@ -419,12 +463,13 @@ button {
 
 .section-heading {
   max-width: 44rem;
+  margin-bottom: 3.5rem;
 }
 
 .section h2 {
-  font-size: clamp(2.45rem, 5vw, 4rem);
-  line-height: 1.05;
-  max-width: 13ch;
+  font-size: clamp(2.1rem, 3.8vw, 3.35rem);
+  line-height: 1.08;
+  max-width: 14ch;
 }
 
 .section-light .section-heading p,
@@ -440,13 +485,13 @@ button {
 .steps {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
+  gap: 1.75rem;
+  margin-top: 0;
 }
 
 .capability,
 .step {
-  padding: 2rem 0.4rem 0 0;
+  padding: 1.6rem 1.25rem 0 0;
   border-top: 1px solid var(--line-dark);
 }
 
@@ -472,6 +517,7 @@ button {
   grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
   gap: clamp(2rem, 4vw, 4rem);
   align-items: center;
+  margin-bottom: 3.5rem;
 }
 
 .process-copy p {
@@ -605,7 +651,7 @@ button {
   }
 
   .hero h1 {
-    max-width: 12ch;
+    max-width: 11ch;
   }
 
   .hero-visual {
@@ -638,6 +684,10 @@ button {
   .section {
     padding: 5rem 0;
   }
+
+  .section-heading {
+    margin-bottom: 2.75rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -649,7 +699,7 @@ button {
   }
 
   .hero h1 {
-    font-size: clamp(2.9rem, 16vw, 4rem);
+    font-size: clamp(2.35rem, 12vw, 3.25rem);
   }
 
   .hero-visual {
@@ -684,5 +734,24 @@ button {
 
   .hero-actions {
     flex-direction: column;
+  }
+
+  .capability,
+  .step {
+    padding-right: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
