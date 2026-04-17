@@ -104,14 +104,32 @@ button {
 .brand {
   display: inline-flex;
   align-items: center;
+  gap: 0.8rem;
   min-height: 2.5rem;
+}
+
+.brand-logo-crop {
+  width: 2.5rem;
+  height: 2.5rem;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  flex: 0 0 auto;
 }
 
 .brand-logo {
   width: auto;
   height: 2.5rem;
-  object-fit: contain;
+  transform: translateX(-0.72rem);
+  transform-origin: left center;
   filter: drop-shadow(0 10px 20px rgba(3, 13, 27, 0.22));
+}
+
+.brand-text {
+  font-family: 'Sora', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .site-nav {
