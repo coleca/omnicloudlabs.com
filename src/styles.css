@@ -290,25 +290,6 @@ button {
   border-color: rgba(170, 211, 255, 0.34);
 }
 
-.hero-list,
-.launch-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.hero-list li,
-.launch-list li {
-  padding: 0.7rem 1rem;
-  border: 1px solid rgba(165, 210, 255, 0.14);
-  border-radius: 999px;
-  background: rgba(7, 18, 31, 0.34);
-  color: var(--text-muted);
-}
-
 .hero-visual {
   position: relative;
   min-height: 31rem;
@@ -390,32 +371,8 @@ button {
   animation-delay: 1.4s;
 }
 
-.signal-node,
 .signal-beam {
   position: absolute;
-}
-
-.signal-node {
-  width: 0.95rem;
-  height: 0.95rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #ebfbff 0%, var(--accent) 100%);
-  box-shadow: 0 0 22px rgba(101, 212, 255, 0.45);
-}
-
-.node-a {
-  top: 30%;
-  left: 42%;
-}
-
-.node-b {
-  top: 50%;
-  left: 58%;
-}
-
-.node-c {
-  bottom: 24%;
-  left: 46%;
 }
 
 .signal-beam {
@@ -571,10 +528,6 @@ button {
 .contact-shell p {
   max-width: 42rem;
   color: var(--text-muted);
-}
-
-.launch-list {
-  margin-top: 1rem;
 }
 
 .site-footer {
