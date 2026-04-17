@@ -104,19 +104,14 @@ button {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
-  font-family: 'Sora', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+  min-height: 2.5rem;
 }
 
-.brand-dot {
-  width: 0.9rem;
-  height: 0.9rem;
-  border-radius: 999px;
-  background: radial-gradient(circle at 30% 30%, #ebfbff 0%, var(--accent) 54%, var(--accent-strong) 100%);
-  box-shadow: 0 0 24px var(--accent-glow);
+.brand-logo {
+  width: auto;
+  height: 2.5rem;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(3, 13, 27, 0.22));
 }
 
 .site-nav {
@@ -533,6 +528,7 @@ button {
 .site-footer {
   padding: 2rem 0 3.5rem;
   color: rgba(244, 247, 251, 0.58);
+  text-align: center;
 }
 
 .site-footer p {
