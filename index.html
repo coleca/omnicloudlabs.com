@@ -29,6 +29,22 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-56D36E6VPL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-56D36E6VPL');
+    </script>
+    <!-- Microsoft Clarity -->
+    <script>
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "zhv39ugys3");
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#top">Skip to content</a>
@@ -203,14 +219,26 @@
             </a>
             <a class="button button-secondary" href="#top">Back to top</a>
           </div>
+          <div class="contact-meta">
+            <span><strong>Support &amp; Billing:</strong> <a href="mailto:cole@omnicloudlabs.com">cole@omnicloudlabs.com</a> (replies within 1 business day)</span>
+            <span><strong>Location:</strong> Florida, United States</span>
+            <span><strong>Payments:</strong> Processed securely in USD via Stripe</span>
+            <span><strong>Digital Reports:</strong> Delivered electronically within 48 hours &middot; <a href="/refund-policy.html">100% Money-Back Guarantee</a></span>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>OmniCloud Labs</p>
-      <p>Cloud platform engineering, AI product development, and startup-focused delivery.</p>
-      <p>&copy; <span id="year"></span> OmniCloud Labs</p>
+      <p>OmniCloud Labs &middot; Florida, United States</p>
+      <p>Cloud platform engineering, AI product development, and data research reports.</p>
+      <nav class="footer-links" aria-label="Legal and policies">
+        <a href="/privacy.html" data-track="footer_privacy_click">Privacy Policy</a>
+        <a href="/terms.html" data-track="footer_terms_click">Terms of Service</a>
+        <a href="/refund-policy.html" data-track="footer_refund_click">Refund &amp; Cancellation Policy</a>
+        <a href="mailto:cole@omnicloudlabs.com">Customer Support</a>
+      </nav>
+      <p>&copy; <span id="year"></span> OmniCloud Labs. All prices in USD.</p>
     </footer>
 
     <script type="module" src="/src/main.js"></script>
