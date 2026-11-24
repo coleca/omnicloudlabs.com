@@ -1,0 +1,15 @@
+# OmniCloud Labs
+
+> Independent digital publishing and software studio based in Florida, United States.
+
+## Key Products & Properties
+- **GrantDossier** (https://grantdossier.com): Verified IRS Form 990 foundation research dossiers and grant-ready application templates for US 501(c)(3) nonprofits.
+- **Can I Go Boating Today?** (https://canigoboatingtoday.com): Live US coastal marine weather, wind, wave, and NOAA tide forecasts across 63 coastal hubs.
+- **My Huge Book of Coloring** (https://myhugebookofcoloring.com): Original printable and paperback coloring books for kids and adults.
+
+## Key Pages
+- Home: https://omnicloudlabs.com/
+- Privacy Policy: https://omnicloudlabs.com/privacy.html
+- Terms of Service: https://omnicloudlabs.com/terms.html
+- Refund Policy: https://omnicloudlabs.com/refund-policy.html
+- Sitemap: https://omnicloudlabs.com/sitemap.xml
